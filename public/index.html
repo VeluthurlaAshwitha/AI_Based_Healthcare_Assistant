@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login & Registration Forms</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+      }
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+      }
+      input[type="text"],
+      input[type="password"],
+      input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+      p {
+        text-align: center;
+      }
+      a {
+        color: #4caf50;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container login-container">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required />
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+
+        <input type="submit" value="Login" />
+      </form>
+      <p>
+        Don't have an account?
+        <a href="#" onclick="toggleForms()">Register here</a>
+      </p>
+    </div>
+
+    <div class="container registration-container" style="display: none">
+      <h2>Registration Form</h2>
+      <form id="registrationForm">
+        <label for="firstname">First Name:</label>
+        <input type="text" id="firstname" name="firstname" required />
+
+        <label for="lastname">Last Name:</label>
+        <input type="text" id="lastname" name="lastname" required />
+
+        <label for="regEmail">Email:</label>
+        <input type="email" id="regEmail" name="email" required />
+
+        <label for="regPassword">Password:</label>
+        <input type="password" id="regPassword" name="password" required />
+
+        <input type="submit" value="Register" />
+      </form>
+      <p>
+        Already have an account?
+        <a href="#" onclick="toggleForms()">Login here</a>
+      </p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
