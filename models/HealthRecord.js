@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 
-const healthRecordSchema = new mongoose.Schema({
+const healthRecordSchema = new mongoose.Schema(
+    {
     user: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
@@ -22,6 +23,7 @@ const healthRecordSchema = new mongoose.Schema({
         type: String,
         required: true
     }
-});
+
+    });
 
 export default mongoose.model('HealthRecord', healthRecordSchema);
