@@ -1,5 +1,4 @@
 const socket = io();
-
 const login = document.getElementById('login');
 const chat = document.getElementById('chat');
 const joinRoomButton = document.getElementById('joinRoom');
