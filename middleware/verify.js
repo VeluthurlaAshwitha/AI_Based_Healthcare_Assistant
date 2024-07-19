@@ -27,6 +27,7 @@ export async function Verify(req, res, next) {
           .json({ message: "This session has expired. Please login" });
       }
 
+     
       const { id } = decoded; // get user id from the decoded token
       const user = await User.findById(id); // find user by that `id`
       const { password, ...data } = user._doc; // return user object without the password
