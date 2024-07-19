@@ -9,4 +9,5 @@ const Validate = (req, res, next) => {
   }
   next();
 };
+
 export default Validate;
