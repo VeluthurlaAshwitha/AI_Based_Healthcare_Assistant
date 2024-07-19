@@ -4,7 +4,7 @@ const regform = document.getElementById("registrationForm");
 const registerUser = async (e) => {
   e.preventDefault();
   console.log(e);
-
+  
   const myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
 
